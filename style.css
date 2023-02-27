@@ -1,0 +1,72 @@
+:root{
+    --h1-gradient: linear-gradient(90deg, rgba(116,0,255,1) 0%, rgba(175,119,255,1) 28%, rgba(95,130,255,1) 72%, rgba(116,0,255,1) 100%);
+    --background-color: linear-gradient(45deg, rgba(24,12,75,1) 0%, rgba(40,0,88,1) 100%);
+}
+
+*{
+    color: white;
+    font-family: "Rubik", sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background: var(--background-color);
+}
+
+/* page */
+
+.content{
+    display: flex;
+
+}
+
+h1{
+    margin: 0;
+}
+
+h1 > #gradient-text{
+    background: var(--h1-gradient);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+    animation: letter-gradient 20s linear infinite;
+}
+
+/* page 1 */
+
+.page1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image{
+    width: 300px;
+    height: 300px;
+
+    border-radius: 30px 4px 14px 99px;
+    overflow: hidden;
+
+}
+
+#image{
+    width: 300px;
+    height: 300px;
+    background: var(--image);
+    background-size: cover;
+}
+
+/* animations */
+
+@keyframes letter-gradient {
+    from {
+        background-position: -200px center;
+    }
+    to {
+        background-position: 200px center;
+    }
+}
